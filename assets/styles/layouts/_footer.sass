@@ -1,0 +1,20 @@
+footer
+  +clearfix
+  -webkit-font-smoothing: antialiased
+  background-color: #555D61
+  color: #FFFFFF
+  padding: $container-padding $container-padding
+
+  a
+    color: #FFFFFF
+
+  ul
+    list-style-type: none
+    padding-left: 0
+
+  .box,
+  .contact-details
+    +breakpoint(max-width $medium)
+      margin-bottom: $base-spacing
+    +breakpoint($medium)
+      +gallery(3 of 12)

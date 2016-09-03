@@ -1,0 +1,44 @@
+.tri-boxes
+  -webkit-font-smoothing: antialiased
+  color: #FFFFFF
+
+  +breakpoint($medium)
+    display: flex
+    flex-direction: row
+
+  a
+    color: #FFFFFF
+    & p:hover
+      text-decoration: underline
+
+  img
+    width: 111px
+    height: 111px
+    display: block
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: $container-padding
+
+
+  %box
+    display: block
+    flex-direction: column
+    padding: 30px
+
+    +breakpoint($medium)
+      display: flex
+      width: span(4 of 12 0)
+
+      &:last
+
+  .first
+    @extend %box
+    background-color: #0076C1
+
+  .second
+    @extend %box
+    background-color: #1E92C6
+
+  .third
+    @extend %box
+    background-color: #1EB4C6

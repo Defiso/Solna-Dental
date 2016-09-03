@@ -1,0 +1,24 @@
+.home
+  .about
+    +clearfix
+    background-color: #FFFFFF
+    background-image: url('../images/big-heart-blue.png')
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 120%
+
+    +breakpoint($large)
+      background-image: url('../images/big-heart-blue.png'), url('../images/dentist.jpg')
+      background-repeat: no-repeat, no-repeat
+      background-position: -100px -720px, right 50%
+      background-size: auto
+
+    .button
+      display: block
+
+    .left
+      padding: $container-padding
+
+      +breakpoint($large)
+        padding: $container-padding * 2
+        +span(50%)
