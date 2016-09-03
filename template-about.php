@@ -4,6 +4,9 @@
  */
 ?>
 
+<?php use Roots\Sage\Extras; ?>
+<?php $portrait = Extras\get_about_us_img_uri() ?>
+
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/page', 'header'); ?>
 
@@ -22,7 +25,7 @@
       Grundare Solna Dental</p>
     </div>
     <div class="right">
-      x
+      <img src="<?php echo $portrait ?>" alt="Solna Dentals grundare">
     </div>
   </div>
 

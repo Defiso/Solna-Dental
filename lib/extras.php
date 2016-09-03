@@ -46,3 +46,16 @@ function get_jumbotron_uri() {
   return $jumbotron;
 
 }
+
+// About us img
+function get_about_us_img_uri() {
+  $processed_img = '';
+  
+  if (get_field('about-us-interview-image')) {
+    $raw_image = get_field('about-us-interview-image');
+    $processed_img = $raw_image['sizes']['about-us-interview-image'];
+  }
+
+  return $processed_img;
+
+}
