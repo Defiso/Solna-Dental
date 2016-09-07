@@ -1,7 +1,15 @@
 .page-template-template-services
   aside
-    +span(3 of 12)
+    +breakpoint($medium)
+      +span(3 of 12)
 
   main
-    +span(7 of 12)
-    +post(2 of 12 last)
+    +breakpoint($medium)
+      +span(7 of 12)
+      +post(2 of 12 last)
+
+  h1
+    font-family: 'Merriweather', serif
+    font-size: 2.2em
+    font-weight: 400
+    -webkit-font-smoothing: antialiased

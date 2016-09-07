@@ -14,11 +14,15 @@ th {
 
 td {
   border-bottom: $base-border;
-  padding: $small-spacing 0;
+  padding: $small-spacing;
 }
 
 tr,
 td,
 th {
   vertical-align: middle;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
 }

@@ -97,7 +97,8 @@ function display_sidebar() {
     is_page_template('template-custom.php'),
     is_page_template('template-services.php'),
     is_page_template('template-contact.php'),
-    is_page_template('template-about.php')
+    is_page_template('template-about.php'),
+    is_page_template('template-pricing.php')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

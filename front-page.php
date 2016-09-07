@@ -38,7 +38,7 @@
 
   <div class="about">
     <div class="left">
-      <h2><?php the_field('frontpage_about_title'); ?></h2>
+      <h1><?php the_field('frontpage_about_title'); ?></h1>
       <?php the_field('frontpage_about_text'); ?>
       <a href="<?php the_field('frontpage_about_link'); ?>" class="button">Boka tid</a>
     </div>

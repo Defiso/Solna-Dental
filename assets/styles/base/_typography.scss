@@ -4,6 +4,7 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   background-color: #F4F5F4;
+  font-weight: 400;
 }
 
 h1,
@@ -18,6 +19,10 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
+h1 {
+  margin-bottom: $small-spacing / 2;
+}
+
 p, ul, ol {
   margin: 0 0 $small-spacing;
 }
@@ -28,7 +33,7 @@ a {
   transition: color $base-duration $base-timing;
 
   &:active,
-  &:focus,
+  &:focus,     
   &:hover {
     color: $action-color;
   }
