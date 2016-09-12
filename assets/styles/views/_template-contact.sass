@@ -1,13 +1,57 @@
 .page-template-template-contact
+  h2
+    font-family: 'Varela Round'
+    font-size: 2.06em
+    font-weight: normal
+
+
+  .clinics
+    +clearfix
+    margin-bottom: $base-spacing
+
+    .clinic
+      +breakpoint($medium)
+        +span(4 of 12)
+
+      +breakpoint($large)
+        +span(3 of 12)
+
+      span
+        display: block
+
+      .title
+        font-weight: 700
+
+  .clinic-section
+    margin-bottom: $base-spacing
+
+    .title
+      display: inline-block
+      margin-right: 10px
+
+    .clinic-name
+      display: inline-block
+      font-weight: 600
+
   .employees
     +clearfix
 
   .employee
-    +gallery(3 of 12)
+    +gallery(6 of 12)
+    margin-bottom: 10px
+
+    +breakpoint($medium)
+      +gallery(4 of 12)
+
+    +breakpoint($large)
+      +gallery(3 of 12)
 
     span,
     img
       display: block
+
+    img
+      margin-bottom: $small-spacing
 
     .name
       font-weight: bold

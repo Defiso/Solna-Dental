@@ -50,6 +50,7 @@ function setup() {
 
   // Add support for custom image sizes
   add_image_size( 'jumbotron', 1200, 470, true);
+  add_image_size( 'contact_clinic', 270, 197, true);
   add_image_size( 'contact_portrait', 250, 315, true);
   add_image_size( 'about-us-interview-image', 514, 412, true);
 
