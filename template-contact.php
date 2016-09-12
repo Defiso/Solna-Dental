@@ -11,38 +11,47 @@
 
     <?php get_template_part('templates/content', 'page'); ?>
 
-    <h2>Arenatandläkarna</h2>
+    <?php if( have_rows('clinic_section') ): ?>
 
-      <?php if( have_rows('arena_employees') ): ?>
+      <?php while ( have_rows('clinic_section') ) : the_row(); ?>
 
-        <div class="employees">
-          <?php
-            // loop through the rows of data
-            while ( have_rows('arena_employees') ) : the_row();
+        <section>
 
-              $image = get_sub_field('arena_employee_img');
-              $alt = $image['alt'];
-              $url = $image['url'];
+          <h2 class="name"><?php echo the_sub_field('clinic_name'); ?></h2>
 
-              // thumbnail
-              $size = 'contact_portrait';
-              $thumb = $image['sizes'][ $size ];
+          <?php if( have_rows('employee_list') ): ?>
+
+            <div class="employees">
+
+              <?php while ( have_rows('employee_list') ) : the_row();
+
+                $image = get_sub_field('image');
+                $alt = $image['alt'];
+                $url = $image['url'];
+
+                // thumbnail
+                $size = 'contact_portrait';
+                $thumb = $image['sizes'][ $size ];
 
               ?>
 
                 <div class="employee">
                   <?php if( !empty($image) ): ?> <img src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>;"><?php endif; ?>
-                  <span class="name"><?php echo the_sub_field('arena_employee_name'); ?></span>
-                  <span class="title"><?php echo the_sub_field('arena_employee_title'); ?></span>
+                  <span class="name"><?php echo the_sub_field('name'); ?></span>
+                  <span class="title"><?php echo the_sub_field('title'); ?></span>
                 </div>
 
-            <?php endwhile; ?>
-        </div>
+              <?php endwhile; ?>
 
-      <?php endif; ?>
+            </div>
 
+          <?php endif; ?>
 
-    <h2>Huvudstatandläkarna</h2>
+        </section>
+
+      <?php endwhile; ?>
+
+    <?php endif; ?>
     
   </div>
 <?php endwhile; ?>
