@@ -13,6 +13,53 @@
     -webkit-font-smoothing: antialiased
     z-index: 2
 
+  &.split-layout
+    display: flex
+    flex-direction: column
+
+    +breakpoint($medium)
+      flex-direction: row
+
+    .left
+      display: flex
+      height: 30%
+      background-size: cover
+
+      +breakpoint($medium)
+        height: 100%
+        width: span(6 of 12 0)
+
+      +breakpoint($large)
+        width: span(8 of 12 0)
+
+    .right
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      height: 70%
+      background: $blue
+      background-image: url('../images/big-heart.png')
+      background-repeat: no-repeat
+      background-size: 75%
+      background-position: center top $base-spacing
+      padding: $base-spacing*1.5 $base-spacing
+      text-align: center
+      color: white
+
+      +breakpoint($medium)
+        height: 100%
+        width: span(6 of 12 0)
+
+      +breakpoint($large)
+        width: span(4 of 12 0)
+
+      .button
+        background-color: $turqouise
+
+        &:hover,
+        &:focus
+          background-color: shade($turqouise, 20%)
+
 .home .jumbotron .heart
   background-image: url('../images/big-heart.png')
   background-repeat: no-repeat
