@@ -118,5 +118,6 @@ function assets() {
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
   wp_enqueue_script('navigation', Assets\asset_path('scripts/navigation.js'), ['jquery'], null, true);
+  wp_enqueue_script('video-section', Assets\asset_path('scripts/video-section.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

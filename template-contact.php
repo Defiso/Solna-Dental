@@ -38,13 +38,13 @@
             <span><?php echo the_sub_field('title'); ?></span>
             <span><?php echo the_sub_field('clinic-address'); ?></span>
             <span><?php echo the_sub_field('clinic-postal-code'); ?> <?php echo the_sub_field('clinic-city'); ?></span>
-            <a href="mailto:<?php echo the_sub_field('clinic-email'); ?>"><?php echo the_sub_field('clinic-email'); ?></a>            
+            <a href="mailto:<?php echo the_sub_field('clinic-email'); ?>"><?php echo the_sub_field('clinic-email'); ?></a>
           </div>
 
         <?php endwhile; ?>
 
       <?php endif; ?>
-      
+
     </div>
 
     <?php if( have_rows('clinic_employees_section') ): ?>
@@ -88,6 +88,19 @@
       <?php endwhile; ?>
 
     <?php endif; ?>
-    
+
   </div>
+
+  <section class="video-section">
+    <div class="video-content">
+      <h2><?php echo the_field('video_section_header'); ?></h2>
+      <a href="https://solnadentalhuvudstatandlakarna.opusdentalonline.com/" class="button">Boka tid</a>
+    </div>
+    <video id="video-section-bg" poster="<?= get_template_directory_uri(); ?>/dist/images/video-firstframe.jpg">
+      <source src="<?= get_template_directory_uri(); ?>/dist/videos/solnadental.mp4" type="video/mp4">
+        <!-- *** KONVERTERA .OGG TILL .OGV *** -->
+      <source src="<?= get_template_directory_uri(); ?>/dist/videos/solnadental.ogg" type="video/ogg">
+      <source src="<?= get_template_directory_uri(); ?>/dist/videos/solnadental.webm" type="video/webm">
+    </video>
+  </section>
 <?php endwhile; ?>

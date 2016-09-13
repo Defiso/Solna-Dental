@@ -1,0 +1,24 @@
+.video-section
+  position: relative
+
+  video
+    display: block
+    max-width: 130%
+
+    +breakpoint($medium)
+      max-width: 100%
+
+  .video-content
+    position: absolute
+    width: 100%
+    top: 5%
+    text-align: center
+    padding: $base-spacing
+
+    +breakpoint($medium)
+      top: 35%
+
+    h2
+      color: white
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6)
+      margin-bottom: $small-spacing/1.5
