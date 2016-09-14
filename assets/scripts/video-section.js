@@ -16,8 +16,6 @@
   }
 
   $(window).scroll(function() {
-    console.log('videoplayed: ' + videoPlayed);
-
     if ( scrolledIntoView('.video-section') && videoPlayed === false ) {
       video.get(0).play();
     }
