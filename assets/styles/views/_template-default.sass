@@ -1,0 +1,14 @@
+.page-template-default
+
+  main
+    +container
+    background-color: white
+
+    .content
+      +breakpoint($medium)
+        +span(8 of 12)
+        +push(2)
+
+      +breakpoint($large)
+        +span(7 of 12)
+        +push(2.5)
