@@ -8,15 +8,42 @@
     font-size: 35px
     font-weight: 400
 
-  .name 
+  .name
     font-weight: bold
 
   .left
-    +span (7 of 12)
-    padding: 3em
+    +span(full)
+    padding: $base-spacing $container-padding
+
+    +breakpoint($medium)
+      +span(8 of 12)
+      +push(2)
+
+    +breakpoint($large)
+      +span (6 of 12)
+      +push(0)
+      padding: $base-spacing
+
+    +breakpoint($xlarge)
+      +span(7 of 12)
+      padding: 3em
 
   .right
-    +span (5 of 12 last)
-    
+    +span(full)
+
+    +breakpoint($medium)
+      +span(8 of 12)
+      +push(2)
+
+    +breakpoint($large)
+      +span (6 of 12 last)
+      padding: $base-spacing $base-spacing $base-spacing 0
+      +push(0)
+
+      +breakpoint($xlarge)
+        +span (5 of 12 last)
+        padding: 0
+
     img
       display: block
+      width: 100%
