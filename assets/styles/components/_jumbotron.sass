@@ -1,6 +1,13 @@
+$jumbotron-height: 420px
+$jumbotron-large-height: 470px
+
 .jumbotron
   position: relative
-  height: 470px
+  background-position: center
+  height: $jumbotron-height
+
+  +breakpoint($large-height)
+    height: $jumbotron-large-height
 
   span
     color: #FFFFFF
