@@ -47,43 +47,45 @@
 
     <?php if( have_rows('clinic_employees_section') ): ?>
 
-      <?php while ( have_rows('clinic_employees_section') ) : the_row(); ?>
+      <section class="employees" id="medarbetare">
 
-        <section class="clinic-section">
+        <?php while ( have_rows('clinic_employees_section') ) : the_row(); ?>
 
-          <h2 class="title">Medarbetare</h2><span class="clinic-name"><?php echo the_sub_field('clinic_name'); ?></span>
+          <section class="clinic-section">
 
-          <?php if( have_rows('employee_list') ): ?>
+            <h2 class="title">Medarbetare</h2><span class="clinic-name"><?php echo the_sub_field('clinic_name'); ?></span>
 
-            <div class="employees">
+            <?php if( have_rows('employee_list') ): ?>
 
-              <?php while ( have_rows('employee_list') ) : the_row();
+              <div class="employees">
 
-                $image = get_sub_field('image');
-                $alt = $image['alt'];
-                $url = $image['url'];
+                <?php while ( have_rows('employee_list') ) : the_row();
 
-                // thumbnail
-                $size = 'contact_portrait';
-                $thumb = $image['sizes'][ $size ];
+                  $image = get_sub_field('image');
+                  $alt = $image['alt'];
+                  $url = $image['url'];
 
-              ?>
+                  // thumbnail
+                  $size = 'contact_portrait';
+                  $thumb = $image['sizes'][ $size ];
 
-                <div class="employee">
-                  <?php if( !empty($image) ): ?> <img src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>;"><?php endif; ?>
-                  <span class="name"><?php echo the_sub_field('name'); ?></span>
-                  <span class="title"><?php echo the_sub_field('title'); ?></span>
-                </div>
+                ?>
 
-              <?php endwhile; ?>
+                  <div class="employee">
+                    <?php if( !empty($image) ): ?> <img src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>;"><?php endif; ?>
+                    <span class="name"><?php echo the_sub_field('name'); ?></span>
+                    <span class="title"><?php echo the_sub_field('title'); ?></span>
+                  </div>
 
-            </div>
+                <?php endwhile; ?>
 
-          <?php endif; ?>
+              </div>
 
-        </section>
+            <?php endif; ?>
 
-      <?php endwhile; ?>
+          </section>
+
+        <?php endwhile; ?>
 
     <?php endif; ?>
 
