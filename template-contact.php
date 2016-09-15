@@ -7,8 +7,8 @@
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/page', 'header'); ?>
   <div class="sub-jumbotron">
-    <h2>Det ska vara enkelt att få friska tänder</h2>
-    <p>Solna Dental är Solnas största privata praktik med två filialer, Huvudstatandläkarna och Arenatandläkarna. I våra moderna lokaler med den allra senaste tekniken kan vi erbjuda dig tandvård i högsta klass. Vårt team tar emot dig på ett omtänksamt och professionellt sätt och du kan alltid känna dig trygg hos oss då du får samma behandlare vid alla dina besök.</p>
+    <h2><?php the_field('sub_jumbotron_title'); ?></h2>
+    <p><?php the_field('sub_jumbotron_text'); ?></p>
   </div>
 
   <div class="content">
@@ -92,7 +92,7 @@
   <section class="video-section">
     <div class="video-content">
       <h2><?php echo the_field('video_section_header'); ?></h2>
-      <a href="https://solnadentalhuvudstatandlakarna.opusdentalonline.com/" class="button">Boka tid</a>
+      <a href="<?php the_field('link_url'); ?>" target="_blank" class="button">Boka tid</a>
     </div>
 
     <video width="100%" autoplay="autoplay" id="video-section-bg" poster="<?= get_template_directory_uri(); ?>/dist/images/video-firstframe.jpg">

@@ -11,16 +11,14 @@
   <?php get_template_part('templates/page', 'header'); ?>
 
   <div class="sub-jumbotron">
-    <h2>Det ska vara enkelt att få friska tänder</h2>
-    <p>Solna Dental är Solnas största privata praktik med två filialer, Huvudstatandläkarna och Arenatandläkarna. I våra moderna lokaler med den allra senaste tekniken kan vi erbjuda dig tandvård i högsta klass. Vårt team tar emot dig på ett omtänksamt och professionellt sätt och du kan alltid känna dig trygg hos oss då du får samma behandlare vid alla dina besök.</p>
+    <h2><?php the_field('sub_jumbotron_title'); ?></h2>
+    <p><?php the_field('sub_jumbotron_text'); ?></p>
   </div>
 
   <div class="interview">
     <div class="left">
-      <h1>Ett tryggt och bra val</h1>
-      <p>“Solna Dental är Solnas största privata praktik med två filialer, Huvudstatandläkarna och Arenatandläkarna. I våra moderna lokaler med den allra senaste tekniken kan vi erbjuda dig tandvård i högsta klass. Vårt team tar emot dig på ett omtänksamt och professionellt sätt och du kan alltid känna dig trygg hos oss då du får samma behandlare vid alla dina besök”</p>
-
-      <p>
+      <h1><?php the_field('interview_title'); ?></h1>
+      <p><?php the_field('interview_text'); ?></p>
       <span class="name">Dani Toutoundji</span><br>
       Grundare Solna Dental</p>
     </div>
