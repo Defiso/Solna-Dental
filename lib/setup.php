@@ -123,6 +123,7 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
   wp_enqueue_script('navigation', Assets\asset_path('scripts/navigation.js'), ['jquery'], null, true);
   if ( is_page_template('template-contact.php') ) {
+    wp_enqueue_script('canvas-video-player', Assets\asset_path('scripts/canvas-video-player.js'), ['jquery'], null, true);
     wp_enqueue_script('video-section', Assets\asset_path('scripts/video-section.js'), ['jquery'], null, true);
   }
 }

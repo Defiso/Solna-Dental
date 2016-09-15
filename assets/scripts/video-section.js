@@ -1,10 +1,28 @@
 (function($) {
   var video         = $('#video-section-bg'),
-      videoPlayed   = false;
+      videoPlayed   = false,
+      isIOS         = true;
 
   video.bind('ended', function() {
     videoPlayed = true;
   });
+
+  console.log(isIOS);
+
+  if (isIOS) {
+
+    var canvasVideo = new CanvasVideoPlayer({
+      videoSelector: '#video-section-bg',
+      canvasSelector: '.video-section-bg-ios',
+      timelineSelector: false,
+      pauseOnClick: false,
+      audio: false
+    });
+
+  } else {
+    // Use HTML5 video
+    $('.video-section-bg-ios').hide();
+  }
 
   // Calculate if the element is scrolled in view so that at least a quarter of the video is in view
   function scrolledIntoView(el) {
@@ -20,11 +38,11 @@
   $(window).scroll(function() {
     if ( scrolledIntoView('.video-section') && videoPlayed === false ) {
       video.get(0).play();
-      console.log('play');
+      canvasVideo.playPause()
     }
     else if (videoPlayed === false) {
       video.get(0).pause();
-      console.log('pause');
+      canvasVideo.playPause()
     }
   });
 })(jQuery);

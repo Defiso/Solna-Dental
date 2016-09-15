@@ -94,11 +94,14 @@
       <h2><?php echo the_field('video_section_header'); ?></h2>
       <a href="https://solnadentalhuvudstatandlakarna.opusdentalonline.com/" class="button">Boka tid</a>
     </div>
-    <video id="video-section-bg" poster="<?= get_template_directory_uri(); ?>/dist/images/video-firstframe.jpg">
+
+    <video width="100%" autoplay="autoplay" id="video-section-bg" poster="<?= get_template_directory_uri(); ?>/dist/images/video-firstframe.jpg">
       <source src="<?= get_template_directory_uri(); ?>/dist/videos/solnadental.mp4" type="video/mp4">
         <!-- *** KONVERTERA .OGG TILL .OGV *** -->
       <source src="<?= get_template_directory_uri(); ?>/dist/videos/solnadental.ogg" type="video/ogg">
       <source src="<?= get_template_directory_uri(); ?>/dist/videos/solnadental.webm" type="video/webm">
     </video>
+
+    <canvas class="video-section-bg-ios"></canvas>  
   </section>
 <?php endwhile; ?>

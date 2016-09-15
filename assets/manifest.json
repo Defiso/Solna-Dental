@@ -22,6 +22,11 @@
         "scripts/navigation.js"
       ]
     },
+    "canvas-video-player.js": {
+      "files": [
+        "scripts/canvas-video-player.js"
+      ]
+    },
     "video-section.js": {
       "files": [
         "scripts/video-section.js"

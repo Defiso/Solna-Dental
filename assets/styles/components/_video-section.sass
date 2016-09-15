@@ -1,12 +1,15 @@
 .video-section
   position: relative
+  max-width: 100%
+  overflow: hidden
 
-  video
+  .video-section-bg,
+  .video-section-bg-ios
     display: block
-    max-width: 130%
+    width: 125%
 
     +breakpoint($medium)
-      max-width: 100%
+      width: 100%
 
   .video-content
     position: absolute
