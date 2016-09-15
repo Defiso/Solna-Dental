@@ -50,13 +50,16 @@ function setup() {
 
   // Add support for custom image sizes
   add_image_size( 'jumbotron', 1200, 470, true);
-  add_image_size( 'contact_clinic', 270, 197, true);
+  add_image_size( 'contact_clinic', 255, 196, true);
   add_image_size( 'contact_portrait', 250, 315, true);
   add_image_size( 'about-us-interview-image', 514, 412, true);
 
   // Use main stylesheet for visual editor
   // To add custom styles edit /assets/styles/layouts/_tinymce.scss
   add_editor_style(Assets\asset_path('styles/main.css'));
+
+  // Hide ACF
+  add_filter('acf/settings/show_admin', '__return_false');
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 

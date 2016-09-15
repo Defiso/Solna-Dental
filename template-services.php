@@ -9,6 +9,8 @@
 
   <div class="content">
 
+    <?php get_template_part('templates/content', 'page'); ?>
+
     <?php if (is_page_template('template-services.php')) : ?>
       <aside class="sidebar-menu">
         <header>Behandlingar</header>
@@ -19,8 +21,6 @@
         ?>
       </aside>
     <?php endif; ?>
-
-    <?php get_template_part('templates/content', 'page'); ?>
     
   </div>
 <?php endwhile; ?>

@@ -12,39 +12,40 @@
   <div class="content">
 
     <div class="price-list">
-      <?php get_template_part('templates/content', 'page'); ?>
 
-        <?php if( have_rows('list_section') ): ?>
+      <?php if( have_rows('list_section') ): ?>
 
-          <?php while ( have_rows('list_section') ) : the_row(); ?>
+        <?php while ( have_rows('list_section') ) : the_row(); ?>
 
-              <section>
+            <section>
 
-                <h2 class="name"><?php echo the_sub_field('section_name'); ?></h2>
+              <h2 class="name"><?php echo the_sub_field('section_name'); ?></h2>
 
-                <?php if( have_rows('price_list') ): ?>
+              <?php if( have_rows('price_list') ): ?>
 
-                  <table>
+                <table>
 
-                    <?php while ( have_rows('price_list') ) : the_row(); ?>
-                    <tr>
-                      <td><?php echo the_sub_field('article'); ?></td>
-                      <td class="price"><?php echo the_sub_field('price'); ?></td>
-                    </tr>
+                  <?php while ( have_rows('price_list') ) : the_row(); ?>
+                  <tr>
+                    <td><?php echo the_sub_field('article'); ?></td>
+                    <td class="price"><?php echo the_sub_field('price'); ?></td>
+                  </tr>
 
-                    <?php endwhile; ?>
-                    
-                  </table>
+                  <?php endwhile; ?>
+                  
+                </table>
 
-                <?php endif; ?>
+              <?php endif; ?>
 
-              </section>
+            </section>
 
-          <?php endwhile; ?>
+        <?php endwhile; ?>
 
-        <?php endif; ?>
+      <?php endif; ?>
 
     </div>
+
+    <?php get_template_part('templates/content', 'page'); ?>
 
   </div>
 <?php endwhile; ?>

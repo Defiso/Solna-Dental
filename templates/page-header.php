@@ -7,7 +7,7 @@ if ( is_page_template('template-contact.php') ): ?>
     <!-- Do something ztronk with this or put it in h2 in .right? <span><?= Titles\title(); ?></span> -->
     <div class="left" style="background-image:url('<?php echo $jumbotron ?>')"></div>
     <div class="right">
-      <h2>Ring oss på 08-40 80 70 00</h2>
+      <h2>Ring oss på<br>08-40 80 70 00</h2>
       <p>
         Vi har öppet 08.00-17.00 varje vardag. Växeln hjälper dig att komma till den mottagning som är närmst dig.
       </p>

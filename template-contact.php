@@ -13,8 +13,6 @@
 
   <div class="content">
 
-    <?php get_template_part('templates/content', 'page'); ?>
-
     <div class="clinics">
 
       <h2>Mottagningar</h2>
