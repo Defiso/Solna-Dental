@@ -1,11 +1,14 @@
+$jumbotron-small-height: 240px
 $jumbotron-height: 420px
 $jumbotron-large-height: 470px
-$split-layout-image-height-mobile: 240px
 
 .jumbotron
   position: relative
   background-position: center
-  height: $jumbotron-height
+  height: $jumbotron-small-height
+
+  +breakpoint($medium)
+    height: $jumbotron-height
 
   +breakpoint($large-height)
     height: $jumbotron-large-height
@@ -18,8 +21,12 @@ $split-layout-image-height-mobile: 240px
     right: 3%
     font-family: 'Varela Round', sans-serif
     font-size: 2.3em
+    text-align: center
     -webkit-font-smoothing: antialiased
     z-index: 2
+
+    +breakpoint($medium)
+      text-align: left
 
   &.split-layout
     display: flex
@@ -30,9 +37,12 @@ $split-layout-image-height-mobile: 240px
       flex-direction: row
       height: $jumbotron-height
 
+    +breakpoint($large-height)
+      height: $jumbotron-large-height
+
     .left
       display: flex
-      height: $split-layout-image-height-mobile
+      height: $jumbotron-small-height
       background-size: cover
 
       +breakpoint($medium)
