@@ -1,8 +1,11 @@
 .sub-jumbotron
-  padding: $container-padding
   color: #FFFFFF
   background-color: $green
   text-align: center
+  padding: $base-spacing*1.5 $small-spacing
+
+  +breakpoint($medium)
+    padding: $container-padding
 
   p,
   h2
