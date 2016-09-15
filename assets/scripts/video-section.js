@@ -35,14 +35,28 @@
     return ( (elTop + elHeight*0.25 <= docViewBottom) && (elBottom - elHeight*0.25 >= docViewTop) );
   }
 
+  function play() {
+    if (isIOS) {
+      canvasVideo.play();
+    } else {
+      video.get(0).play();
+    }
+  }
+
+  function pause() {
+    if (isIOS) {
+      canvasVideo.pause();
+    } else {
+      video.get(0).play();
+    }
+  }
+
   $(window).scroll(function() {
     if ( scrolledIntoView('.video-section') && videoPlayed === false ) {
-      video.get(0).play();
-      canvasVideo.playPause()
+      play();
     }
     else if (videoPlayed === false) {
-      video.get(0).pause();
-      canvasVideo.playPause()
+      pause();
     }
   });
 })(jQuery);
