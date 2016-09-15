@@ -7,8 +7,6 @@
     videoPlayed = true;
   });
 
-  console.log(isIOS);
-
   if (isIOS) {
 
     var canvasVideo = new CanvasVideoPlayer({
