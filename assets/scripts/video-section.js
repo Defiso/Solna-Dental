@@ -1,7 +1,7 @@
 (function($) {
   var video         = $('#video-section-bg'),
       videoPlayed   = false,
-      isIOS         = true;
+      isIOS         = /iPad|iPhone|iPod/.test(navigator.platform);
 
   video.bind('ended', function() {
     videoPlayed = true;
