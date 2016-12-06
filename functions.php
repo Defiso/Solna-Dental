@@ -26,3 +26,15 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+/**
+* Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
+*/
+add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+function add_admin_link($items, $args){
+    if( $args->theme_location == 'primary_navigation' ){
+        $items .= '<li class="menu-item"><a title="Boka tid" href="#" class="modal-trigger">' . __( 'Boka tid' ) . '</a>
+        </li>';
+    }
+    return $items;
+}

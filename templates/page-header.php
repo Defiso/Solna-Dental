@@ -6,11 +6,11 @@ if ( is_page_template('template-contact.php') ): ?>
   <div class="jumbotron split-layout">
     <div class="left" style="background-image:url('<?php echo $jumbotron ?>')"></div>
     <div class="right">
-      <h2>Ring oss på<br>08-40 80 70 00</h2>
+      <h2>Ring oss på<br>08 - 55 39 39 99</h2>
       <p>
         <?php the_field('jumbotron_box_text'); ?>
       </p>
-      <a href="<?php the_field('link_url'); ?>" target="_blank" class="button">Boka tid online</a>
+      <a href="# target="_blank" class="button modal-trigger">Boka tid online</a>
     </div>
   </div>
 

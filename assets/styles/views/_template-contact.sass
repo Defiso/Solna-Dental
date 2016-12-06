@@ -12,7 +12,7 @@
 
     .clinic
       margin-bottom: $base-spacing
-      
+
       +breakpoint($medium)
         +span(4 of 12)
 
@@ -24,6 +24,17 @@
 
       .title
         font-weight: 700
+
+      .opening-hours
+        margin-top: $small-spacing
+
+        .day
+          display: inline-block
+          min-width: 2em
+
+        ul
+          list-style: none
+          padding: 0
 
   .employees
     +clearfix

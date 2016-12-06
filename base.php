@@ -36,5 +36,27 @@ use Roots\Sage\Wrapper;
       ?>
       
     </div><!-- /.wrap -->
+    <div class="modal">
+      <div class="modal-fade-screen" id="modal-fade-screen">
+        <div class="modal-inner">
+          <div class="modal-close" for="modal-1"></div>
+          <span class="h1">Välj mottagning</span>
+          <div class="modal-content">
+            <a class="pick-clinic" href="https://solnadentalarenatandlakarna.opusdentalonline.com/">
+              <span class="h2">Arenatandläkarna</span>
+              <p>Evenemangsgatan 16<br>
+              169 56 Solna</p>
+            </a>
+            <a class="pick-clinic" href="https://solnadentalhuvudstatandlakarna.opusdentalonline.com/">
+              <span class="h2">Huvudstatandläkarna</span>
+              <p>Krysshammarvägen 10<br>
+              171 57 Solna</p>
+            </a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

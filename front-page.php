@@ -16,19 +16,19 @@
 
   <div class="tri-boxes">
 
-    <a href="#" class="first">
+    <a href="<?php the_field('box_1_link'); ?>" class="first">
       <img src="<?= get_template_directory_uri(); ?>/dist/images/about-icon.png" alt="Ikon">
       <h2><?php the_field('frontpage_box_1_title'); ?></h2>
       <?php the_field('frontpage_box_1_text'); ?>
     </a>
 
-    <a href="#" class="second">
+    <a href="<?php the_field('box_2_link'); ?>" class="second">
       <img src="<?= get_template_directory_uri(); ?>/dist/images/treatment-icon.png" alt="Ikon">
-      <h2><?php the_field('frontpage_box_2_title'); ?></h2>   
-      <?php the_field('frontpage_box_2_text'); ?>   
+      <h2><?php the_field('frontpage_box_2_title'); ?></h2>
+      <?php the_field('frontpage_box_2_text'); ?>
     </a>
 
-    <a href="#" class="third">
+    <a href="<?php the_field('box_3_link'); ?>" class="third">
       <img src="<?= get_template_directory_uri(); ?>/dist/images/urgent-icon.png" alt="Ikon">
       <h2><?php the_field('frontpage_box_3_title'); ?></h2>
       <?php the_field('frontpage_box_3_text'); ?>
@@ -40,7 +40,7 @@
     <div class="left">
       <h1><?php the_field('frontpage_about_title'); ?></h1>
       <?php the_field('frontpage_about_text'); ?>
-      <a href="<?php the_field('frontpage_about_link'); ?>" class="button">Boka tid</a>
+      <a href="#" class="button modal-trigger">Boka tid</a>
     </div>
   </div>
 

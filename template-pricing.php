@@ -32,7 +32,7 @@
                   </tr>
 
                   <?php endwhile; ?>
-                  
+
                 </table>
 
               <?php endif; ?>
@@ -42,6 +42,10 @@
         <?php endwhile; ?>
 
       <?php endif; ?>
+
+      <div class="pricelist-file">
+        <a href="<?php echo the_field('pricelist_file'); ?>" target="_blank" class="button">Ladda ner fullständig prislista</a>
+      </div>
 
     </div>
 

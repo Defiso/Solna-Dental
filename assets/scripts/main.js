@@ -75,3 +75,10 @@
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+(function($) {
+  $('.expander-trigger').click(function(){
+    $('.expander-trigger').closest('.expander').toggleClass("expander-hidden");
+  });
+})(jQuery);

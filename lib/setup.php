@@ -59,7 +59,7 @@ function setup() {
   add_editor_style(Assets\asset_path('styles/main.css'));
 
   // Hide ACF
-  add_filter('acf/settings/show_admin', '__return_false');
+  // add_filter('acf/settings/show_admin', '__return_false');
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
@@ -122,6 +122,7 @@ function assets() {
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
   wp_enqueue_script('navigation', Assets\asset_path('scripts/navigation.js'), ['jquery'], null, true);
+  wp_enqueue_script('modal', Assets\asset_path('scripts/modal.js'), ['jquery'], null, true);
   if ( is_page_template('template-contact.php') ) {
     wp_enqueue_script('canvas-video-player', Assets\asset_path('scripts/canvas-video-player.js'), ['jquery'], null, true);
     wp_enqueue_script('video-section', Assets\asset_path('scripts/video-section.js'), ['jquery'], null, true);

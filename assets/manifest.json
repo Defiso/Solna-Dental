@@ -27,6 +27,11 @@
         "scripts/canvas-video-player.js"
       ]
     },
+    "modal.js": {
+      "files": [
+        "scripts/modal.js"
+      ]
+    },
     "video-section.js": {
       "files": [
         "scripts/video-section.js"
